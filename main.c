@@ -14,12 +14,17 @@ int main() {
     ptr r = cp(q);
     
     printf("p: %d\n", *(int*)Ptr(p));
+    printf("getREfcount(p): %d\n",  getREfcount(p)  );
+
     (*(int*)Ptr(p))++;
     printf("q: %d\n", *(int*)Ptr(q));
+    printf("getREfcount(q): %d\n",  getREfcount(q)  );
+
     (*(int*)Ptr(q))++;
     printf("r: %d\n", *(int*)Ptr(r));
+    printf("getREfcount(r): %d\n",  getREfcount(r)  );
     
-    del(p);
+    del(p);  // del(p);  del(p);
     del(q);
     del(r);
 }

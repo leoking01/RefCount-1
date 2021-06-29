@@ -35,4 +35,6 @@ void delFunc(T p, void (*f)(void*));
 // Return the contained pointer.
 void* Ptr(T p);
 
+int  getREfcount(  T  p ) ;
+
 #endif

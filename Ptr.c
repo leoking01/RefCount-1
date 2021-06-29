@@ -31,6 +31,8 @@ void del(ptr p) {
     } else {
         p->ctr--;
     }
+
+     printf("p.ctr=: %d\n",  p->ctr  );
 }
 
 void delFunc(ptr p, void (*f)(void*)) {
@@ -45,4 +47,10 @@ void delFunc(ptr p, void (*f)(void*)) {
 
 void *Ptr(ptr p) {
     return p->p;
+}
+
+
+int  getREfcount(  ptr p )
+{
+    return  p->ctr;
 }
