@@ -16,15 +16,24 @@ int main() {
     printf("p: %d\n", *(int*)Ptr(p));
     printf("getREfcount(p): %d\n",  getREfcount(p)  );
 
+
     (*(int*)Ptr(p))++;
     printf("q: %d\n", *(int*)Ptr(q));
     printf("getREfcount(q): %d\n",  getREfcount(q)  );
+    //return  0  ;
 
     (*(int*)Ptr(q))++;
     printf("r: %d\n", *(int*)Ptr(r));
     printf("getREfcount(r): %d\n",  getREfcount(r)  );
-    
+    //    return  0  ;
+
     del(p);  // del(p);  del(p);
+    //      return  0  ;
     del(q);
-    del(r);
+
+    //    return  0  ;
+    if( 0 )
+        del(r);
+
+    return  0  ;
 }
